@@ -1,0 +1,182 @@
+/* assets/css/custom.css */
+
+/* =========================================================
+   1. GENERAL STYLING
+   ========================================================= */
+body {
+    background-color: #f4f6f9; /* Warna background abu-abu terang yang lembut untuk dashboard */
+    font-family: 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+    color: #333;
+}
+
+/* Custom Shadow untuk Card agar terlihat lebih modern dan bersih */
+.shadow-sm {
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.04) !important;
+}
+
+.card {
+    border-radius: 0.5rem;
+}
+
+.card-header {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+    padding: 1rem 1.25rem;
+}
+
+/* =========================================================
+   2. AUTHENTICATION PAGES (LOGIN & REGISTER)
+   ========================================================= */
+/* Wrapper utama untuk halaman Auth (Presisi membagi 2 layar jika di desktop) */
+.auth-wrapper {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f8f9fa;
+}
+
+/* Kotak utama Auth */
+.auth-box {
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    width: 900px;
+    max-width: 95%;
+}
+
+/* Bagian Kiri (Ilustrasi/Gambar) */
+.auth-left {
+    flex: 1;
+    background: linear-gradient(135deg, #0d6efd 0%, #0a58ca 100%);
+    color: white;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.auth-left img {
+    max-width: 80%;
+    margin-bottom: 2rem;
+}
+
+/* Bagian Kanan (Formulir) */
+.auth-right {
+    flex: 1;
+    padding: 3rem 4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.auth-title {
+    font-weight: 700;
+    font-size: 1.5rem;
+    color: #212529;
+    margin-bottom: 0.5rem;
+}
+
+.auth-subtitle {
+    color: #6c757d;
+    font-size: 0.9rem;
+    margin-bottom: 2rem;
+}
+
+/* Form Input Styling */
+.auth-right .form-control {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    border: 1px solid #e9ecef;
+}
+
+.auth-right .form-control:focus {
+    background-color: #fff;
+    border-color: #86b7fe;
+    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+.auth-btn {
+    padding: 0.75rem;
+    border-radius: 8px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Responsif untuk layar kecil (HP) */
+@media (max-width: 768px) {
+    .auth-box {
+        flex-direction: column;
+        width: 400px;
+    }
+    .auth-left {
+        display: none; /* Sembunyikan bagian kiri (gambar) di HP agar fokus ke form */
+    }
+    .auth-right {
+        padding: 2rem;
+    }
+}
+
+/* =========================================================
+   3. SIDEBAR & MAIN LAYOUT (DASHBOARD)
+   ========================================================= */
+#sidebar {
+    min-width: 250px;
+    max-width: 250px;
+    min-height: 100vh;
+    background-color: #212529; /* Dark theme sidebar */
+    color: #fff;
+    transition: all 0.3s;
+}
+
+#sidebar .sidebar-header {
+    padding: 20px;
+    background: #1a1e21;
+    border-bottom: 1px solid #343a40;
+}
+
+#sidebar ul.components {
+    padding: 20px 0;
+}
+
+#sidebar ul li a {
+    padding: 12px 20px;
+    font-size: 0.95rem;
+    display: block;
+    color: #adb5bd;
+    text-decoration: none;
+    transition: 0.2s ease;
+}
+
+#sidebar ul li a:hover, #sidebar ul li.active > a {
+    color: #fff;
+    background: #0d6efd; /* Primary color highlight */
+    border-left: 4px solid #fff;
+}
+
+#sidebar ul li a i {
+    margin-right: 10px;
+    font-size: 1.1rem;
+}
+
+/* Main Content Wrapper */
+#content {
+    width: 100%;
+    padding: 20px;
+    min-height: 100vh;
+    transition: all 0.3s;
+}
+
+/* Navbar Custom dalam Layout */
+.navbar-custom {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+    border-radius: 8px;
+    padding: 10px 20px;
+}
